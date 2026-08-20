@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1785973314781,
+  "lastUpdate": 1787189197570,
   "repoUrl": "https://github.com/metacall/core",
   "entries": {
     "MetaCall Benchmark (ubuntu-latest)": [
@@ -341850,6 +341850,660 @@ window.BENCHMARK_DATA = {
             "value": 0.042960626196473076,
             "unit": "ms/iter",
             "extra": "iterations: 3\ncpu: 0.046720251438655595 ms\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "iseoluwaolowogoke@student.oauife.edu.ng",
+            "name": "Iseoluwa Olowogoke",
+            "username": "G00dS0ul"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8f74e1feec3709b79c50e8ec75e20d3dfcdb587a",
+          "message": "test(docker): enable Python→C# integration test in cli image (#842)\n\n* test(docker): enable Python→C# integration test in cli image (expected failing)\n\n* test(cs_loader): expose uninitialized libHandle on failed init\n\n* fix(cs_loader): initialize libHandle to prevent invalid free on failed start\n\n* test(cs_loader): drop MALLOC_PERTURB_ reproducer\n\nIt has served its purpose: at 62fb691 the invalid-configuration test aborts\ndeterministically on the uninitialized libHandle, and passes once the member\nis initialized. The variable is glibc-specific and asserts nothing on its\nown, so it does not belong in the final tree.\n\nTo reproduce the original abort, check out 62fb691 and run:\n  MALLOC_PERTURB_=42 ctest -R metacall-csharp-invalid-configuration-test\n\n* fix(cli): install .NET 8 runtime in cli image\n\n* test(docker): guard C# integration test on arches without .NET 8\n\n* Update index.py\n\n---------\n\nCo-authored-by: Vicente Eduardo Ferrer Garcia <7854099+viferga@users.noreply.github.com>",
+          "timestamp": "2026-08-20T10:23:30+09:00",
+          "tree_id": "113a9c63fa2e31fc538cc9199fb06309977c0769",
+          "url": "https://github.com/metacall/core/commit/8f74e1feec3709b79c50e8ec75e20d3dfcdb587a"
+        },
+        "date": 1787189176665,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2740.379395994324,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2816.8354449999374 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2786.9143009978925,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2872.17781299947 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2852.2894989899614,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2939.2652620004415 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2739.053950003694,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2813.7866750004223 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2668.1855149778357,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2749.426487001699 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5_mean",
+            "value": 2757.364532192742,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2838.298336400394 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5_median",
+            "value": 2740.379395994324,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2816.835444999938 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5_stddev",
+            "value": 67.93490917981676,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 71.2422309223087 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_va_args/iterations:1/repeats:5_cv",
+            "value": 0.024637623493979164,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 0.025100332128108846 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2567.565944985006,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2638.8017400001295 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2260.3252089921284,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2325.2366019987107 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2521.7300430019236,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2599.490179998039 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2134.8304119869963,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2198.184795001943 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2062.1432379998055,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2123.0674909999366 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5_mean",
+            "value": 2309.3189693931718,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2376.956161599752 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5_median",
+            "value": 2260.3252089921284,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2325.2366019987107 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5_stddev",
+            "value": 226.79972002171954,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 233.0118385897145 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_rb_call_bench/call_array_args/iterations:1/repeats:5_cv",
+            "value": 0.09821065129054755,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 0.0980295061196634 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3",
+            "value": 2463.1719390033313,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1137.2740580000175 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3",
+            "value": 2671.0230819996923,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1238.1348180000123 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3",
+            "value": 3990.5308899945453,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1670.728850999847 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3_mean",
+            "value": 3041.5753036658566,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1348.7125756666258 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3_median",
+            "value": 2671.0230819996923,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1238.1348180000123 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3_stddev",
+            "value": 828.3646860106634,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 283.39739662099026 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_va_args/iterations:1/repeats:3_cv",
+            "value": 0.2723472553884421,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.2101243821211617 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3",
+            "value": 3957.9560670024703,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1637.8783709999461 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3",
+            "value": 3962.89712200695,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1631.370689000022 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3",
+            "value": 3909.639647998546,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1669.9395630000965 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3_mean",
+            "value": 3943.497612335989,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1646.3962076666878 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3_median",
+            "value": 3957.9560670024707,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1637.8783709999461 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3_stddev",
+            "value": 29.425750932594525,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 20.647146691983178 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_array_args/iterations:1/repeats:3_cv",
+            "value": 0.00746184068694383,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.0125408128346243 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3",
+            "value": 0.003515000003062596,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 0.0032569999994791488 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3",
+            "value": 0.003375999995114398,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 0.0032460000003453615 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3",
+            "value": 0.0041480000163574005,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 0.0036659999995691805 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3_mean",
+            "value": 0.0036796666715114648,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.0033896666664645636 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3_median",
+            "value": 0.003515000003062596,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.0032569999994791488 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3_stddev",
+            "value": 0.0004115001117537354,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.00023937488012271938 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_node_call_bench/call_async/iterations:1/repeats:3_cv",
+            "value": 0.11183081199708428,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.07061900289221901 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_init_bench/init/iterations:1/repeats:1",
+            "value": 1.0058969999988676,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1.0054550000000007 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_init_bench/load/iterations:1/repeats:1",
+            "value": 96.05979700000944,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 95.91679500000001 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_init_bench/load_warm/iterations:1/repeats:1",
+            "value": 255.94199999545708,
+            "unit": "us/iter",
+            "extra": "iterations: 1\ncpu: 256.428000000003 us\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_init_bench/destroy/iterations:1/repeats:1",
+            "value": 14.321055000010574,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 14.028015000000005 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3",
+            "value": 1.7411353770000062,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 1.7360217740000001 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3",
+            "value": 1.7478800270000079,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 1.7391075750000002 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3",
+            "value": 1.8030555330000198,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 1.7998573490000003 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3_mean",
+            "value": 1.764023645666678,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1.7583288993333337 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3_median",
+            "value": 1.7478800270000079,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1.7391075750000002 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3_stddev",
+            "value": 0.03397040988136334,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.03599777271914787 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterate/iterations:1000/repeats:3_cv",
+            "value": 0.019257343837091764,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.020472718575458973 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 2.8873184269999963,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 2.841660589 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 2.7793850849999724,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 2.7708363150000004 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 2.7714394829999947,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 2.755169606000001 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3_mean",
+            "value": 2.812714331666655,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 2.7892221700000004 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3_median",
+            "value": 2.779385084999973,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 2.7708363150000004 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3_stddev",
+            "value": 0.06473107003722016,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.0460836444211678 ms\nthreads: 1"
+          },
+          {
+            "name": "set_bench/set_iterators/iterations:1000/repeats:3_cv",
+            "value": 0.02301373776513742,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.01652204149129067 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3",
+            "value": 88.04582299998742,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 87.98298300000002 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3",
+            "value": 261.5654010000128,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 261.373256 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3",
+            "value": 522.8775749999954,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 522.2281550000001 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3_mean",
+            "value": 290.8295996666652,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 290.5281313333333 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3_median",
+            "value": 261.5654010000128,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 261.373256 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3_stddev",
+            "value": 218.8880036218297,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 218.5857324211809 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_macro/iterations:1/repeats:3_cv",
+            "value": 0.7526331703262271,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.7523737251123186 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3",
+            "value": 876.7654920000041,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 864.99529 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3",
+            "value": 1285.1873589999911,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1280.175999 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3",
+            "value": 1747.1559310000089,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1693.158762 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3_mean",
+            "value": 1303.0362606666679,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1279.4433503333332 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3_median",
+            "value": 1285.1873589999911,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 1280.1759990000003 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3_stddev",
+            "value": 435.4696505425903,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 414.08222211213734 ms\nthreads: 1"
+          },
+          {
+            "name": "log_bench/call_va/iterations:1/repeats:3_cv",
+            "value": 0.33419611079724865,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.3236424824938568 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5",
+            "value": 950.7881869923835,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 947.1271350001546 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5",
+            "value": 973.825558011356,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 945.5778700000392 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5",
+            "value": 946.4931849930167,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 953.3369219999175 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5",
+            "value": 994.3110620161519,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1002.8505460001211 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5",
+            "value": 912.3936099946945,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 919.0640129991152 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5_mean",
+            "value": 955.5623204015207,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 953.5912971998694 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5_median",
+            "value": 950.7881869923837,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 947.1271350001546 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5_stddev",
+            "value": 30.836625746687787,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 30.515045722643254 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_c_api_bench/call_object/iterations:1/repeats:5_cv",
+            "value": 0.03227065894951828,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 0.032000130257320715 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 1.0080488979999984,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 1.0026772180000005 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 0.9989538650000043,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 0.9962034790000001 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3",
+            "value": 1.0006188189999818,
+            "unit": "ms/iter",
+            "extra": "iterations: 1000\ncpu: 0.9934195500000005 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3_mean",
+            "value": 1.002540527333328,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.997433415666667 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3_median",
+            "value": 1.0006188189999818,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.9962034790000001 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3_stddev",
+            "value": 0.00484248164752788,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.004749806559495028 ms\nthreads: 1"
+          },
+          {
+            "name": "set_small_bench/set_iterators/iterations:1000/repeats:3_cv",
+            "value": 0.0048302103660671615,
+            "unit": "ms/iter",
+            "extra": "iterations: 3\ncpu: 0.004762028707771276 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 1917.8892790003488,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1954.8472200001274 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 1923.3727860042507,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1960.8243510005298 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 1921.7080880116555,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 1931.6027440006085 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2276.9991120026416,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2331.9125260014475 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5",
+            "value": 2426.4139220029506,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2499.5224660002223 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5_mean",
+            "value": 2093.2766374043695,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2135.7418614005874 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5_median",
+            "value": 1923.3727860042504,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 1960.8243510005293 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5_stddev",
+            "value": 241.76342228068626,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 262.5885773970449 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_va_args/iterations:1/repeats:5_cv",
+            "value": 0.11549520878447729,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 0.12294958587590883 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2180.0153989951523,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2249.680580999936 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2184.3977939888928,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2250.95611399977 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2087.015704007456,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2139.612586001256 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2246.6719959848547,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2313.9608629999807 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5",
+            "value": 2026.2794500262373,
+            "unit": "ms/iter",
+            "extra": "iterations: 1\ncpu: 2077.82567699795 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5_mean",
+            "value": 2144.8760686005185,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2206.4071641997784 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5_median",
+            "value": 2180.0153989951527,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 2249.680580999936 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5_stddev",
+            "value": 87.42443862900993,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 95.41974400405209 ms\nthreads: 1"
+          },
+          {
+            "name": "metacall_py_call_bench/call_array_args/iterations:1/repeats:5_cv",
+            "value": 0.040759669012509575,
+            "unit": "ms/iter",
+            "extra": "iterations: 5\ncpu: 0.04324666161001113 ms\nthreads: 1"
           }
         ]
       }
